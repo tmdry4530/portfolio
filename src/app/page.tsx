@@ -129,54 +129,7 @@ export default function Main() {
             </div>
           </div>
         </section>
-        <section className="w-full h-full py-12 md:py-12 lg:py-24 ">
-          <div className="mx-auto max-w-4xl p-4">
-            <div className="relative flex items-center">
-              <div className="flex-grow border-t border-gray-300" />
-              <span className="mx-2 flex-shrink text-lg font-medium text-gray-700">
-                Timeline
-              </span>
-              <div className="flex-grow border-t border-gray-300" />
-            </div>
-            <div className="mt-4 flex w-full justify-between">
-              <div className="relative">
-                <div className="absolute left-1/2 top-0 h-6 w-0.5 -translate-x-1/2 transform bg-gray-300" />
-                <div className="mt-6 rounded bg-white p-4 text-center shadow">
-                  <p className="text-sm font-semibold text-gray-700">Event 1</p>
-                  <p className="mt-1 text-xs text-gray-500">Jan 1, 2023</p>
-                </div>
-              </div>
-              <div className="relative">
-                <div className="absolute left-1/2 -bottom-6 h-6 w-0.5 -translate-x-1/2 transform bg-gray-300" />
-                <div className="mb-6 rounded bg-white p-4 text-center shadow">
-                  <p className="text-sm font-semibold text-gray-700">Event 2</p>
-                  <p className="mt-1 text-xs text-gray-500">Feb 12, 2023</p>
-                </div>
-              </div>
-              <div className="relative">
-                <div className="absolute left-1/2 top-0 h-6 w-0.5 -translate-x-1/2 transform bg-gray-300" />
-                <div className="mt-6 rounded bg-white p-4 text-center shadow">
-                  <p className="text-sm font-semibold text-gray-700">Event 3</p>
-                  <p className="mt-1 text-xs text-gray-500">Mar 23, 2023</p>
-                </div>
-              </div>
-              <div className="relative">
-                <div className="absolute left-1/2 -bottom-6 h-6 w-0.5 -translate-x-1/2 transform bg-gray-300" />
-                <div className="mb-6 rounded bg-white p-4 text-center shadow">
-                  <p className="text-sm font-semibold text-gray-700">Event 4</p>
-                  <p className="mt-1 text-xs text-gray-500">Apr 15, 2023</p>
-                </div>
-              </div>
-              <div className="relative">
-                <div className="absolute left-1/2 top-0 h-6 w-0.5 -translate-x-1/2 transform bg-gray-300" />
-                <div className="mt-6 rounded bg-white p-4 text-center shadow">
-                  <p className="text-sm font-semibold text-gray-700">Event 5</p>
-                  <p className="mt-1 text-xs text-gray-500">May 30, 2023</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
+        <section className="w-full h-full py-12 md:py-12 lg:py-24 "></section>
       </main>
     </div>
   );
