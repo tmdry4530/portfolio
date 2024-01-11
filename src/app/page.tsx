@@ -121,9 +121,9 @@ export default function Main() {
               <Image
                 alt="Image"
                 className="mx-auto aspect-video overflow-hidden rounded-xl object-cover object-center sm:w-full lg:order-last"
-                src="/placeholder.svg"
+                src="/skillStack.png"
                 width={550}
-                height={310}
+                height={309}
                 layout="responsive"
               />
             </div>
