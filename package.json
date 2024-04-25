@@ -10,6 +10,7 @@
     "vercel-deploy": "next build && next export"
   },
   "dependencies": {
+    "canvas": "^2.11.2",
     "devicon": "^2.16.0",
     "next": "^14.2.2",
     "react": "^18.2.0",

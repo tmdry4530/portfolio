@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     siteName: "Seonggyo Jung's Portfolio",
     images: [
       {
-        url: "/sky.jpg",
+        url: "https://chamdom.vercel.app/og/_image",
         width: 1200,
         height: 630,
       },
