@@ -5,15 +5,15 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Web developer portfolio",
-  description: "Chamdom's portfolio",
+  title: "Seonggyo Jung",
+  description: "Seonggyo Jung's portfolio site",
 };
 
 export default function RootLayout({
   children,
-}: {
+}: Readonly<{
   children: React.ReactNode;
-}) {
+}>) {
   return (
     <html lang="en">
       <body className={inter.className}>{children}</body>
