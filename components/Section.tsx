@@ -53,23 +53,35 @@ const Section = ({ darkMode }: SectionProps) => {
   }, [activeSection]);
 
   return (
-    <main className="flex">
-      <div className="flex flex-col w-[calc(100%-16rem)] ml-64">
-        <Element name="home">
-          <HomeSection darkMode={darkMode} />
-        </Element>
-        <Element name="about">
-          <AboutSection darkMode={darkMode} />
-        </Element>
-        <Element name="project">
-          <ProjectSection darkMode={darkMode} />
-        </Element>
-        <Element name="experience">
-          <ExperienceSection darkMode={darkMode} />
-        </Element>
-      </div>
-      <footer></footer>
-    </main>
+    <>
+      <link
+        rel="stylesheet"
+        as="style"
+        crossOrigin="anonymous"
+        href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css"
+      />
+      <main className="flex flex-col md:flex-row w-full overflow-x-hidden">
+        <div className="md:w-64 flex-shrink-0"></div>
+        <div
+          className="flex-1 md:px-0"
+          style={{ fontFamily: "Pretendard, sans-serif" }}
+        >
+          <Element name="home">
+            <HomeSection darkMode={darkMode} />
+          </Element>
+          <Element name="about">
+            <AboutSection darkMode={darkMode} />
+          </Element>
+          <Element name="project">
+            <ProjectSection darkMode={darkMode} />
+          </Element>
+          <Element name="experience">
+            <ExperienceSection darkMode={darkMode} />
+          </Element>
+        </div>
+        <footer></footer>
+      </main>
+    </>
   );
 };
 

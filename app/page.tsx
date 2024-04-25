@@ -18,10 +18,14 @@ const Page = () => {
   };
 
   return (
-    <>
-      <Sidebar darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
-      <Home darkMode={darkMode} />
-    </>
+    <div className="flex">
+      <div className="flex-shrink-0">
+        <Sidebar darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
+      </div>
+      <div className="flex-grow">
+        <Home darkMode={darkMode} />
+      </div>
+    </div>
   );
 };
 
