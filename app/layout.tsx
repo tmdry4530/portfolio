@@ -5,21 +5,28 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  openGraph: {
-    type: "website",
-    url: "https://chamdom.vercel.app",
-    description: "Seonggyo Jung's portfolio site",
-    siteName: "Seonggyo Jung",
-  },
   title: "Seonggyo Jung",
   description: "Seonggyo Jung's portfolio site",
+  openGraph: {
+    title: "Seonggyo Jung",
+    description: "Seonggyo Jung's portfolio site",
+    url: "https://chamdom.vercel.app",
+    siteName: "Seonggyo Jung's Portfolio",
+    images: [
+      {
+        url: "/sky.jpg",
+        width: 1200,
+        height: 630,
+      },
+    ],
+    locale: "en-US",
+    type: "website",
+  },
 };
 
 export default function RootLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+}: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en">
       <body className={inter.className}>{children}</body>
