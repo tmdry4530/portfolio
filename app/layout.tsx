@@ -10,11 +10,6 @@ export const metadata: Metadata = {
     url: "https://chamdom.vercel.app",
     description: "Seonggyo Jung's portfolio site",
     siteName: "Seonggyo Jung",
-    images: [
-      {
-        url: "/sky.png",
-      },
-    ],
   },
   title: "Seonggyo Jung",
   description: "Seonggyo Jung's portfolio site",
