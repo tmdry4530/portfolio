@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Seonggyo Jung",
     description: "Seonggyo Jung's portfolio site",
-    url: "https://chamdom.vercel.app",
+    url: "https://chamdom.vercel.app/",
     siteName: "Seonggyo Jung's Portfolio",
     images: [
       {

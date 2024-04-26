@@ -16,14 +16,18 @@ const Sidebar: FC<SidebarProps> = ({ darkMode, toggleDarkMode }) => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
 
+  const closeMobileMenu = () => {
+    setIsMobileMenuOpen(false);
+  };
+
   return (
     <>
       <header
         className={`sidebar fixed top-0 left-0 h-screen w-full md:w-64 text-white p-5 border-r-2 ${
           darkMode ? "bg-[#070D1B]" : "bg-white"
-        } border-r-[2px] border-[#101624] transition-colors duration-500 md:block ${
-          isMobileMenuOpen ? "block" : "hidden"
-        }`}
+        } border-r-[2px] border-[#101624] md:block ${
+          isMobileMenuOpen ? "block z-50" : "hidden"
+        } transition-all duration-500`}
       >
         <div id="profile" className="mb-5">
           <Image
@@ -40,7 +44,7 @@ const Sidebar: FC<SidebarProps> = ({ darkMode, toggleDarkMode }) => {
         <hr className="border-[2px] border-[#101624]" />
         <div
           id="section"
-          className="mt-5 space-y-4 text-lg font-bold uppercase"
+          className="mt-5 space-y-4 text-lg font-bold uppercase transition-colors duration-500"
         >
           <ScrollLink
             to="home"
@@ -52,6 +56,7 @@ const Sidebar: FC<SidebarProps> = ({ darkMode, toggleDarkMode }) => {
             className={`block my-2 hover:opacity-70 cursor-pointer ${
               darkMode ? "" : "text-black"
             }`}
+            onClick={closeMobileMenu}
           >
             Home
           </ScrollLink>
@@ -65,6 +70,7 @@ const Sidebar: FC<SidebarProps> = ({ darkMode, toggleDarkMode }) => {
             className={`block my-2 hover:opacity-70 cursor-pointer ${
               darkMode ? "" : "text-black"
             }`}
+            onClick={closeMobileMenu}
           >
             About
           </ScrollLink>
@@ -78,6 +84,7 @@ const Sidebar: FC<SidebarProps> = ({ darkMode, toggleDarkMode }) => {
             className={`block my-2 hover:opacity-70 cursor-pointer ${
               darkMode ? "" : "text-black"
             }`}
+            onClick={closeMobileMenu}
           >
             Project
           </ScrollLink>
@@ -91,6 +98,7 @@ const Sidebar: FC<SidebarProps> = ({ darkMode, toggleDarkMode }) => {
             className={`block my-2 hover:opacity-70 cursor-pointer ${
               darkMode ? "" : "text-black"
             }`}
+            onClick={closeMobileMenu}
           >
             Experience
           </ScrollLink>

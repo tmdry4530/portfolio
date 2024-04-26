@@ -8,14 +8,13 @@ const AboutSection = ({ darkMode }: AboutSectionProps) => {
   return (
     <section
       id="about"
-      className="flex flex-col items-center justify-start pt-20 min-h-screen transition-colors duration-500 px-4 md:px-0"
+      className="section min-h-screen flex flex-col items-center justify-center px-4 md:px-0 py-16 transition-colors duration-500"
       style={{ backgroundColor: darkMode ? "#0A101E" : "#F0F0F0" }}
     >
-      <div className="about_container w-full md:w-4/5 mx-auto">
-        <h1 className="text-3xl md:text-4xl text-yellow-500 mt-0 mb-12 md:mb-32 text-center">
-          About me
-        </h1>
-        <div className="flex flex-col xl:flex-row justify-center items-center">
+      <h1 className="text-4xl text-yellow-500 mb-24 text-center">About me</h1>
+      <div className="w-full md:w-4/5 mx-auto transition-opacity duration-500">
+        {" "}
+        <div className="flex flex-col xl:flex-row items-center justify-center mb-12">
           <div className="flex justify-center mb-8 xl:mb-0 xl:w-1/3">
             <Image
               src="/profile.jpg"
@@ -29,7 +28,7 @@ const AboutSection = ({ darkMode }: AboutSectionProps) => {
             />
           </div>
           <div
-            className={`transition-colors duration-500 ml-0 xl:ml-12 p-6 text-center xl:text-left border rounded-xl mb-8 xl:mb-0 h-full xl:w-2/3 text-base md:text-lg ${
+            className={`transition-colors duration-500 ml-0 xl:ml-12 p-6 text-center xl:text-left border rounded-xl h-full xl:w-2/3 text-base md:text-lg ${
               darkMode ? "bg-gray-800 text-white" : "bg-white text-black"
             }`}
           >
@@ -41,129 +40,61 @@ const AboutSection = ({ darkMode }: AboutSectionProps) => {
             만들어내는 것이 저의 목표입니다.
           </div>
         </div>
-      </div>
-      <div className="skill-container w-full mb-8">
-        <h2
-          className={`text-center text-2xl mt-12 mb-12 md:mb-32 text-yellow-500 ${
-            darkMode ? "text-white" : "text-black"
-          }`}
-        >
-          Skills
-        </h2>
-        <div className="flex flex-wrap justify-center gap-4 col-md-12">
-          <ul className="flex flex-wrap justify-center gap-4 col-md-12 text-center list-inline mx-auto skill-icon">
-            <li className="list-inline-item mx-3">
-              <div
-                className="flex flex-col items-center justify-center w-32 h-32 text-white rounded-lg shadow-lg p-4"
-                style={{
-                  backgroundColor: darkMode ? "#22222b" : "#bcbcb8",
-                }}
-              >
-                <i className="devicon-html5-plain colored text-6xl">
-                  <p className="text-base mt-1">HTML 5</p>
-                </i>
-              </div>
-            </li>
-            <li className="list-inline-item mx-3">
-              <div
-                className="flex flex-col items-center justify-center w-32 h-32 text-white rounded-lg shadow-lg p-4"
-                style={{
-                  backgroundColor: darkMode ? "#22222b" : "#bcbcb8",
-                }}
-              >
-                <i className="devicon-css3-plain colored m-2 text-5xl">
-                  <p className="text-base mt-1">CSS</p>
-                </i>
-              </div>
-            </li>
-            <li className="list-inline-item mx-3">
-              <div
-                className="flex flex-col items-center justify-center w-32 h-32 text-white rounded-lg shadow-lg p-4"
-                style={{
-                  backgroundColor: darkMode ? "#22222b" : "#bcbcb8",
-                }}
-              >
-                <i className="devicon-nodejs-plain colored m-2 text-5xl">
-                  <p className="text-base mt-1">Node.js</p>
-                </i>
-              </div>
-            </li>
-            <li className="list-inline-item mx-3">
-              <div
-                className="flex flex-col items-center justify-center w-32 h-32 text-white rounded-lg shadow-lg p-4"
-                style={{
-                  backgroundColor: darkMode ? "#22222b" : "#bcbcb8",
-                }}
-              >
-                <i className="devicon-react-original colored m-2 text-5xl">
-                  <p className="text-base mt-1">React.js</p>
-                </i>
-              </div>
-            </li>
-            <li className="list-inline-item mx-3">
-              <div
-                className="flex flex-col items-center justify-center w-32 h-32 text-white rounded-lg shadow-lg p-4"
-                style={{
-                  backgroundColor: darkMode ? "#22222b" : "#bcbcb8",
-                }}
-              >
-                <i className="devicon-typescript-plain colored m-2 text-5xl">
-                  <p className="text-base mt-1">Typescript</p>
-                </i>
-              </div>
-            </li>
-            <li className="list-inline-item mx-3">
-              <div
-                className="flex flex-col items-center justify-center w-32 h-32 text-white rounded-lg shadow-lg p-4"
-                style={{
-                  backgroundColor: darkMode ? "#22222b" : "#bcbcb8",
-                }}
-              >
-                <i
-                  className={
-                    darkMode
-                      ? "devicon-nextjs-plain m-2 text-5xl"
-                      : "devicon-nextjs-plain colored m-2 text-5xl"
-                  }
+        <div className="skill-container w-full">
+          <h2
+            className={`text-center text-2xl mb-8 text-yellow-500 ${
+              darkMode ? "text-white" : "text-black"
+            }`}
+          >
+            Skills
+          </h2>
+          <ul className="flex flex-wrap justify-center gap-4 col-md-12 text-center list-inline mx-auto skill-icon transition-opacity duration-500">
+            {" "}
+            {[
+              { name: "HTML 5", icon: "devicon-html5-plain colored" },
+              { name: "CSS", icon: "devicon-css3-plain colored" },
+              { name: "Node.js", icon: "devicon-nodejs-plain colored" },
+              { name: "React.js", icon: "devicon-react-original colored" },
+              { name: "Typescript", icon: "devicon-typescript-plain colored" },
+              {
+                name: "Next.js",
+                icon: darkMode
+                  ? "devicon-nextjs-plain"
+                  : "devicon-nextjs-plain colored",
+              },
+              {
+                name: "Solidity",
+                icon: darkMode
+                  ? "devicon-solidity-plain"
+                  : "devicon-solidity-plain colored",
+              },
+              {
+                name: "Hardhat,\nEthers.js",
+                icon: "devicon-hardhat-plain colored",
+              },
+              {
+                name: "R",
+                icon: "devicon-r-plain colored",
+              },
+              { name: "python", icon: "devicon-python-plain colored" },
+            ].map(({ name, icon }) => (
+              <li key={name} className="list-inline-item mx-3">
+                <div
+                  className="flex flex-col items-center justify-center w-32 h-32 text-white rounded-lg shadow-lg p-4 transition-colors duration-500"
+                  style={{
+                    backgroundColor: darkMode ? "#22222b" : "#bcbcb8",
+                  }}
                 >
-                  <p className="text-base mt-1">Next.js</p>
-                </i>
-              </div>
-            </li>
-            <li className="list-inline-item mx-3">
-              <div
-                className="flex flex-col items-center justify-center w-32 h-32 text-white rounded-lg shadow-lg p-4"
-                style={{
-                  backgroundColor: darkMode ? "#22222b" : "#bcbcb8",
-                }}
-              >
-                <i
-                  className={
-                    darkMode
-                      ? "devicon-solidity-plain m-2 text-5xl"
-                      : "devicon-solidity-plain colored m-2 text-5xl"
-                  }
-                >
-                  <p className="text-base mt-1">Solidity</p>
-                </i>
-              </div>
-            </li>
-            <li className="list-inline-item mx-3">
-              <div
-                className="flex flex-col items-center justify-center w-32 h-32 text-white rounded-lg shadow-lg p-4"
-                style={{
-                  backgroundColor: darkMode ? "#22222b" : "#bcbcb8",
-                }}
-              >
-                <i className="devicon-hardhat-plain colored text-6xl">
-                  <p className="text-base mt-1">
-                    Hardhat,
-                    <br />
-                    Ethers.js
-                  </p>
-                </i>
-              </div>
-            </li>
+                  <i
+                    className={`${icon} text-6xl transition-colors duration-500`}
+                  >
+                    <p className="text-base mt-1 transition-colors duration-500">
+                      {name}
+                    </p>
+                  </i>
+                </div>
+              </li>
+            ))}
           </ul>
         </div>
       </div>

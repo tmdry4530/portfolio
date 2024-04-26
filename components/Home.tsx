@@ -9,7 +9,7 @@ const HomeSection = ({ darkMode }: HomeSectionProps) => {
   return (
     <section
       id="home"
-      className="section h-screen transition-colors duration-500 flex items-center justify-center"
+      className="section h-screen flex items-center justify-center transition-colors duration-500"
       style={{ backgroundColor: darkMode ? "#070D1B" : "#FFFFFF" }}
     >
       <div
@@ -20,7 +20,7 @@ const HomeSection = ({ darkMode }: HomeSectionProps) => {
           Seonggyo Jung
         </h1>
         <div
-          className={`text-sm md:text-lg text-center ${
+          className={`text-sm md:text-lg text-center transition-colors duration-500 ${
             darkMode ? "text-white" : "text-black"
           }`}
         >
