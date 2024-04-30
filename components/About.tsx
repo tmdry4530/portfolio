@@ -54,7 +54,7 @@ const AboutSection = ({ darkMode }: AboutSectionProps) => {
               { name: "HTML 5", icon: "devicon-html5-plain colored" },
               { name: "CSS", icon: "devicon-css3-plain colored" },
               { name: "Node.js", icon: "devicon-nodejs-plain colored" },
-              { name: "React.js", icon: "devicon-react-original colored" },
+              { name: "React", icon: "devicon-react-original colored" },
               { name: "Typescript", icon: "devicon-typescript-plain colored" },
               {
                 name: "Next.js",

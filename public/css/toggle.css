@@ -1,16 +1,13 @@
-/* 토글 체크박스의 기본 위치를 오른쪽으로 설정 */
 .toggle-checkbox {
   right: 0;
   transform: translateX(0);
   transition: transform 0.3s ease-in-out;
 }
 
-/* 체크됐을 때 토글 체크박스를 왼쪽으로 이동 */
 .toggle-checkbox:checked {
   transform: translateX(-100%);
 }
 
-/* 체크됐을 때 배경색 변경 */
 .toggle-checkbox:checked + .toggle-label {
-  background-color: #34495e; /* 다크 모드 배경색 */
+  background-color: #34495e;
 }

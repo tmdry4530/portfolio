@@ -1,0 +1,59 @@
+[
+  {
+    "title": "Blockchain 프로젝트",
+    "summary": "Web3 기프티콘 마켓플레이스",
+    "imageUrl": "Naegift.gif",
+    "subtitle": "Naegift",
+    "description": "Naegift는 선물을 등록하거나 구매하여 보낼 수 있는 탈중앙 선물 교환 마켓플레이스입니다. MetaMask를 사용하여 트랜잭션을 발생시키고, 이더리움 블록체인과 스마트 컨트랙트를 활용한 에스크로 서비스가 거래 중개 역할을 담당합니다. 가장 핵심 기술로, 분산된 신원 및 검증 가능한 자격증명 (DID / VC)을 사용하여 안전하게 신원을 관리하고 선물 소유권을 보장합니다.",
+    "github": "https://github.com/naegift/did_project",
+    "skill": [
+      { "name": "React", "icon": "devicon-react-original colored" },
+      {
+        "name": "Solidity",
+        "icon": "devicon-solidity-plain colored"
+      },
+      {
+        "name": "Hardhat,\nEthers.js",
+        "icon": "devicon-hardhat-plain colored"
+      }
+    ]
+  },
+  {
+    "title": "React 프로젝트",
+    "summary": "밈을 공유하는 커뮤니티",
+    "imageUrl": "Pepedooly.gif",
+    "subtitle": "Pepedooly",
+    "description": "Pepedooly는 사용자가 밈을 공유하고, 다른 사용자들과 소통할 수 있는 커뮤니티입니다. 사용자는 밈을 업로드하고, 다른 사용자들의 밈에 대한 반응을 남길 수 있습니다. 또한, 사용자는 다른 사용자들의 밈을 좋아하거나 싫어할 수 있습니다. Pepedooly는 사용자들이 즐겁게 시간을 보낼 수 있는 커뮤니티를 만들기 위해 노력하고 있습니다.",
+    "github": "https://github.com/Team-PD/PEPEDOOLY",
+    "skill": [
+      { "name": "React", "icon": "devicon-react-original colored" },
+      { "name": "Express.js", "icon": "devicon-express-original" },
+      { "name": "Sequalize", "icon": "devicon-sequalize-plain" }
+    ]
+  },
+  {
+    "title": "express 프로젝트 2",
+    "summary": "개발자를 위한 커뮤니티",
+    "imageUrl": "Devup.gif",
+    "subtitle": "Devup",
+    "description": "Devup은 개발자들을 위한 커뮤니티입니다. 사용자들은 Devup을 통해 다른 사용자들과 소통하고, 정보를 공유할 수 있습니다. Devup은 사용자들이 서로 도움을 주고 받을 수 있는 커뮤니티를 만들기 위해 노력하고 있습니다. Devup은 사용자들이 즐겁게 시간을 보낼 수 있는 커뮤니티를 만들기 위해 노력하고 있습니다.",
+    "github": "https://github.com/KGA-Town-Bus/Project_DevUp",
+    "skill": [
+      { "name": "Express.js", "icon": "devicon-express-original" },
+      { "name": "Sequalize", "icon": "devicon-sequalize-plain" },
+      { "name": "Mysql", "icon": "devicon-mysql-original" }
+    ]
+  },
+  {
+    "title": "express 프로젝트 1",
+    "summary": "자전거 정보 공유 커뮤니티",
+    "imageUrl": "DB_WS.gif",
+    "subtitle": "DB_WS",
+    "description": "DB_WS는 자전거 정보를 공유하는 커뮤니티입니다. 사용자들은 DB_WS를 통해 자전거 정보를 공유하고, 다른 사용자들과 소통할 수 있습니다. DB_WS는 사용자들이 자전거 정보를 쉽게 공유하고, 다른 사용자들과 소통할 수 있는 커뮤니티를 만들기 위해 노력하고 있습니다. DB_WS는 사용자들이 즐겁게 시간을 보낼 수 있는 커뮤니티를 만들기 위해 노력하고 있습니다.",
+    "github": "https://github.com/tmdry4530/DB_WS",
+    "skill": [
+      { "name": "Express.js", "icon": "devicon-express-original" },
+      { "name": "Mysql", "icon": "devicon-mysql-original" }
+    ]
+  }
+]

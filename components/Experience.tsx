@@ -29,7 +29,7 @@ const Experience = ({ darkMode }: ExperienceSectionProps) => {
 
   return (
     <section
-      id="home"
+      id="experience"
       className="section min-h-screen flex flex-col items-center justify-center py-12 md:py-24 transition-colors duration-500"
       style={{ backgroundColor: darkMode ? "#070D1B" : "#FFFFFF" }}
     >
@@ -49,7 +49,7 @@ const Experience = ({ darkMode }: ExperienceSectionProps) => {
           iconStyle={iconStyle}
         >
           <h3 className="vertical-timeline-element-title text-xl text-yellow-500 pb-2">
-            Kyungil Game Academy
+            경일게임아카데미
           </h3>
           <h4 className="vertical-timeline-element-subtitle pb-2">
             Frontend, Backend, Blockchain
@@ -66,7 +66,7 @@ const Experience = ({ darkMode }: ExperienceSectionProps) => {
               "Mysql",
               "Express",
               "JWT",
-              "React.js",
+              "React",
               "Redux",
               "Recoil",
               "Typescript",
@@ -96,26 +96,24 @@ const Experience = ({ darkMode }: ExperienceSectionProps) => {
           iconStyle={iconStyle}
         >
           <h3 className="vertical-timeline-element-title text-xl text-yellow-500 pb-2">
-            ETH Seoul Hackaton
+            ETH Seoul 해커톤
           </h3>
           <h4 className="vertical-timeline-element-subtitle pb-2">
             Frontend, Blockchain
           </h4>
           <div className="flex flex-wrap gap-2">
-            {["Nest.js", "Next.js", "Scaffold-eth-2", "Veramo", "Masca"].map(
-              (tech, index) => (
-                <span
-                  key={index}
-                  className={`px-2 py-1 rounded-full transition-colors duration-500 ${
-                    darkMode
-                      ? "bg-gray-700 text-white"
-                      : "bg-gray-200 text-gray-800"
-                  }`}
-                >
-                  {tech}
-                </span>
-              )
-            )}
+            {["Next.js", "Scaffold-eth-2"].map((tech, index) => (
+              <span
+                key={index}
+                className={`px-2 py-1 rounded-full transition-colors duration-500 ${
+                  darkMode
+                    ? "bg-gray-700 text-white"
+                    : "bg-gray-200 text-gray-800"
+                }`}
+              >
+                {tech}
+              </span>
+            ))}
           </div>
         </VerticalTimelineElement>
         <VerticalTimelineElement
@@ -126,7 +124,7 @@ const Experience = ({ darkMode }: ExperienceSectionProps) => {
           iconStyle={iconStyle}
         >
           <h3 className="vertical-timeline-element-title text-xl text-yellow-500 pb-2">
-            Korea National Open University
+            한국방송통신대학교
           </h3>
           <h4 className="vertical-timeline-element-subtitle pb-2">AI</h4>
           <div className="flex flex-wrap gap-2">

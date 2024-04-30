@@ -27,30 +27,42 @@ const HomeSection = ({ darkMode }: HomeSectionProps) => {
           안녕하세요 블록체인 & 프론트엔드 개발자 정승교입니다.
         </div>
         <div id="SNS" className="flex justify-around mt-8 gap-24">
-          <Link href="https://twitter.com" passHref>
+          <a
+            href="https://twitter.com/chamdom44"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <Image
               src={darkMode ? "/twitter-dark.png" : "/twitter-light.png"}
               alt="Twitter"
               width={44}
               height={44}
             />
-          </Link>
-          <Link href="https://github.com" passHref>
+          </a>
+          <a
+            href="https://github.com/tmdry4530"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <Image
               src={darkMode ? "/github-dark.png" : "/github-light.png"}
               alt="Github"
               width={44}
               height={44}
             />
-          </Link>
-          <Link href="https://linkedin.com" passHref>
+          </a>
+          <a
+            href="https://www.linkedin.com/in/seonggyo-jung-30a44b250/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <Image
               src={darkMode ? "/linkedin-dark.png" : "/linkedin-light.png"}
               alt="Linkedin"
               width={44}
               height={44}
             />
-          </Link>
+          </a>
         </div>
       </div>
     </section>
