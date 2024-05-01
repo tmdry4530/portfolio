@@ -52,20 +52,24 @@
   .front,
   .back {
     position: relative;
-    transform: none;
+    backface-visibility: hidden;
   }
 
   .project {
     height: auto;
-    transform-style: flat;
+    transform-style: preserve-3d;
   }
 
-  .flipped .front {
-    display: none;
+  .flipped {
+    transform: rotateY(180deg);
   }
 
-  .flipped .back {
-    transform: none;
+  .front {
+    transform: rotateY(0deg);
+  }
+
+  .back {
+    transform: rotateY(180deg);
   }
 }
 
@@ -225,24 +229,6 @@
   }
 }
 
-@media (max-width: 768px) {
-  .front {
-    transform: rotateY(0deg);
-  }
-
-  .back {
-    display: none;
-  }
-
-  .flipped .front {
-    display: block;
-  }
-
-  .flipped .back {
-    display: none;
-    transform: rotateY(0deg);
-  }
-}
 .textCenter {
   text-align: center;
 }

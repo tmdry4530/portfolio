@@ -1,4 +1,3 @@
-// ProjectSection.tsx
 import Image from "next/image";
 import projects from "@/data/projects.json";
 import styles from "@/public/css/style.module.css";
@@ -14,10 +13,8 @@ const ProjectSection = ({ darkMode }: ProjectProps) => {
   const handleCardClick = (title: string) => {
     const currentIndex = flippedCards.indexOf(title);
     if (currentIndex >= 0) {
-      // 이미 플립된 카드를 클릭한 경우, 상태에서 제거
       setFlippedCards(flippedCards.filter((card) => card !== title));
     } else {
-      // 새로 클릭된 카드를 상태에 추가
       setFlippedCards([...flippedCards, title]);
     }
   };
