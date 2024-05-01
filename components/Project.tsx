@@ -1,3 +1,4 @@
+// ProjectSection.tsx
 import Image from "next/image";
 import projects from "@/data/projects.json";
 import styles from "@/public/css/style.module.css";
@@ -23,11 +24,12 @@ const ProjectSection = ({ darkMode }: ProjectProps) => {
     <section
       id="project"
       className={`${styles.section} ${styles.flex} ${styles.itemsCenter} ${styles.justifyCenter} ${styles.transitionColors} ${styles.duration500}`}
-      style={{ backgroundColor: darkMode ? "#070D1B" : "#FFFFFF" }}
+      style={{ backgroundColor: darkMode ? "#0D1117" : "#F0F6FC" }}
     >
       <div className={styles.projectContainer}>
         <h1
-          className={`${styles.text4xl} ${styles.textYellow500} ${styles.mb24} ${styles.textCenter}`}
+          className={`${styles.text4xl} ${styles.mb24} ${styles.textCenter}`}
+          style={{ color: darkMode ? "#C9D1D9" : "#1F2937" }}
         >
           Project
         </h1>
@@ -46,7 +48,10 @@ const ProjectSection = ({ darkMode }: ProjectProps) => {
                   flippedCards.includes(project.title) ? styles.flipped : ""
                 }`}
               >
-                <div className={`${styles.front} ${styles.projectContent}`}>
+                <div
+                  className={`${styles.front} ${styles.projectContent}`}
+                  style={{ backgroundColor: darkMode ? "#161B22" : "#FFFFFF" }}
+                >
                   <header className={styles.projectHeader}>
                     <Image
                       src={`/${project.imageUrl}`}
@@ -59,14 +64,30 @@ const ProjectSection = ({ darkMode }: ProjectProps) => {
                     />
                   </header>
                   <div className={styles.projectInfo}>
-                    <h2 className={styles.projectTitle}>{project.title}</h2>
-                    <p className={styles.projectSummary}>{project.summary}</p>
+                    <h2
+                      className={styles.projectTitle}
+                      style={{ color: darkMode ? "#C9D1D9" : "#1F2937" }}
+                    >
+                      {project.title}
+                    </h2>
+                    <p
+                      className={styles.projectSummary}
+                      style={{ color: darkMode ? "#8B949E" : "#4B5563" }}
+                    >
+                      {project.summary}
+                    </p>
                   </div>
                 </div>
-                <div className={`${styles.back} ${styles.projectContent}`}>
+                <div
+                  className={`${styles.back} ${styles.projectContent}`}
+                  style={{ backgroundColor: darkMode ? "#161B22" : "#FFFFFF" }}
+                >
                   <div className={styles.projectInfo}>
                     <div className={styles.projectSubtitleContainer}>
-                      <h2 className={styles.projectSubtitle}>
+                      <h2
+                        className={styles.projectSubtitle}
+                        style={{ color: darkMode ? "#C9D1D9" : "#1F2937" }}
+                      >
                         {project.subtitle}
                       </h2>
                       <a
@@ -74,11 +95,15 @@ const ProjectSection = ({ darkMode }: ProjectProps) => {
                         target="_blank"
                         rel="noopener noreferrer"
                         className={styles.projectLink}
+                        style={{ color: darkMode ? "#58A6FF" : "#2D63EB" }}
                       >
                         GitHub
                       </a>
                     </div>
-                    <p className={styles.projectDescription}>
+                    <p
+                      className={styles.projectDescription}
+                      style={{ color: darkMode ? "#8B949E" : "#4B5563" }}
+                    >
                       {project.description}
                     </p>
                   </div>
@@ -89,6 +114,7 @@ const ProjectSection = ({ darkMode }: ProjectProps) => {
                         className={`${styles.projectSkill} ${
                           styles[skill.icon]
                         }`}
+                        style={{ color: darkMode ? "#8B949E" : "#4B5563" }}
                       >
                         {skill.name}
                       </span>

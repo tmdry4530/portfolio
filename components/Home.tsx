@@ -26,7 +26,7 @@ const HomeSection = ({ darkMode }: HomeSectionProps) => {
         >
           안녕하세요 블록체인 & 프론트엔드 개발자 정승교입니다.
         </div>
-        <div id="SNS" className="flex justify-around mt-8 gap-24">
+        <div id="SNS" className="flex justify-around mt-8 gap-10">
           <a
             href="https://twitter.com/chamdom44"
             target="_blank"
