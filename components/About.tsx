@@ -8,7 +8,7 @@ const AboutSection = ({ darkMode }: AboutSectionProps) => {
   return (
     <section
       id="about"
-      className="section min-h-screen flex flex-col items-center justify-center px-4 md:px-0 py-16 transition-colors duration-500"
+      className="section min-h-screen flex flex-col items-center justify-center px-4 md:px-0 py-16 transition-colors duration-500 overflow-y-auto"
       style={{ backgroundColor: darkMode ? "#0A101E" : "#F0F0F0" }}
     >
       <h1 className="text-4xl text-yellow-500 mb-24 text-center">About me</h1>

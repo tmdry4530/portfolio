@@ -23,15 +23,12 @@ const ProjectSection = ({ darkMode }: ProjectProps) => {
   return (
     <section
       id="project"
-      className={`${styles.section} ${styles.flex} ${styles.itemsCenter} ${styles.justifyCenter} ${styles.transitionColors} ${styles.duration500}`}
+      className={`${styles.section} ${styles.flex} ${styles.itemsCenter} ${styles.justifyCenter} ${styles.transitionColors} ${styles.duration500} overflow-y-auto`}
       style={{ backgroundColor: darkMode ? "#0D1117" : "#F0F6FC" }}
     >
       <div className={styles.projectContainer}>
-        <h1
-          className={`${styles.text4xl} ${styles.mb24} ${styles.textCenter}`}
-          style={{ color: darkMode ? "#C9D1D9" : "#1F2937" }}
-        >
-          Project
+        <h1 className="text-4xl text-yellow-500 mt-24 mb-24 text-center">
+          Projects
         </h1>
         <div className={styles.projectGrid}>
           {projects.map((project, index) => (
@@ -39,8 +36,8 @@ const ProjectSection = ({ darkMode }: ProjectProps) => {
               key={project.title}
               id={project.title}
               className={`${styles.projectCard} ${
-                index >= 4 ? styles.hidden : ""
-              }`}
+                !darkMode ? styles.lightMode : ""
+              } ${index >= 4 ? styles.hidden : ""}`}
               onClick={() => handleCardClick(project.title)}
             >
               <div
@@ -49,8 +46,9 @@ const ProjectSection = ({ darkMode }: ProjectProps) => {
                 }`}
               >
                 <div
-                  className={`${styles.front} ${styles.projectContent}`}
-                  style={{ backgroundColor: darkMode ? "#161B22" : "#FFFFFF" }}
+                  className={`${styles.front} ${styles.projectContent} ${
+                    !darkMode ? styles.lightMode : ""
+                  }`}
                 >
                   <header className={styles.projectHeader}>
                     <Image
@@ -112,8 +110,8 @@ const ProjectSection = ({ darkMode }: ProjectProps) => {
                       <span
                         key={index}
                         className={`${styles.projectSkill} ${
-                          styles[skill.icon]
-                        }`}
+                          darkMode ? "" : styles.lightMode
+                        } ${styles[skill.icon]}`}
                         style={{ color: darkMode ? "#8B949E" : "#4B5563" }}
                       >
                         {skill.name}

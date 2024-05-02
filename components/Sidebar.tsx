@@ -50,7 +50,7 @@ const Sidebar: FC<SidebarProps> = ({ darkMode, toggleDarkMode }) => {
             to="home"
             spy={true}
             smooth={true}
-            offset={-50}
+            offset={0}
             duration={500}
             activeClass="text-yellow-500 dark:text-yellow-500"
             className={`block my-2 hover:opacity-70 cursor-pointer ${
@@ -64,7 +64,7 @@ const Sidebar: FC<SidebarProps> = ({ darkMode, toggleDarkMode }) => {
             to="about"
             spy={true}
             smooth={true}
-            offset={-50}
+            offset={0}
             duration={500}
             activeClass="text-yellow-500 dark:text-yellow-500"
             className={`block my-2 hover:opacity-70 cursor-pointer ${
@@ -78,7 +78,7 @@ const Sidebar: FC<SidebarProps> = ({ darkMode, toggleDarkMode }) => {
             to="project"
             spy={true}
             smooth={true}
-            offset={-50}
+            offset={0}
             duration={500}
             activeClass="text-yellow-500 dark:text-yellow-500"
             className={`block my-2 hover:opacity-70 cursor-pointer ${
@@ -92,7 +92,7 @@ const Sidebar: FC<SidebarProps> = ({ darkMode, toggleDarkMode }) => {
             to="experience"
             spy={true}
             smooth={true}
-            offset={-50}
+            offset={0}
             duration={500}
             activeClass="text-yellow-500 dark:text-yellow-500"
             className={`block my-2 hover:opacity-70 cursor-pointer ${
