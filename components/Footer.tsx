@@ -30,7 +30,6 @@ const Footer = ({ darkMode }: FooterProps) => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              {/* Blog icon path assumed as 'icons/blog.svg' */}
               <img src="/icons/blog.svg" alt="Blog" className="w-6 h-6" />
             </a>
           </div>

@@ -1,8 +1,7 @@
-/* style.module.css */
 .section {
-  min-height: 100vh; /* 기존 설정을 유지하면서 */
-  height: auto; /* 추가: 섹션의 높이를 내용에 따라 자동으로 조정 */
-  overflow-y: auto; /* 섹션 내부에서만 스크롤바가 생기도록 처리 */
+  min-height: 100vh;
+  height: auto;
+  overflow-y: auto;
 }
 
 .projectContainer {
@@ -85,12 +84,11 @@
   height: 450px;
   cursor: pointer;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6); /* 기본 그림자 (다크 모드) */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
 }
 
-/* 라이트 모드에서의 그림자 색상 변경 */
 .projectCard.lightMode {
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 라이트 모드에서의 그림자 색상 */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .hidden {
@@ -116,18 +114,17 @@
   right: 0;
   bottom: 0;
   backface-visibility: hidden;
-  background: #161b22; /* 다크 모드 배경색 */
+  background: #161b22;
   border-radius: 10px;
   padding: 30px;
   display: flex;
   flex-direction: column;
-  border: 1px solid #5d5d5d; /* 다크 모드 테두리 색상 */
+  border: 1px solid #5d5d5d;
 }
 
-/* 라이트 모드에서의 스타일 변경 */
 .projectContent.lightMode {
-  background: #ffffff; /* 라이트 모드 배경색 */
-  border-color: #979797; /* 라이트 모드 테두리 색상 */
+  background: #ffffff;
+  border-color: #979797;
 }
 
 .front {
@@ -201,13 +198,12 @@
 .projectSkill {
   font-size: 18px;
   padding: 8px 16px;
-  background-color: rgba(255, 255, 255, 0.1); /* 기본 배경색 */
+  background-color: rgba(255, 255, 255, 0.1);
   border-radius: 24px;
 }
 
-/* 라이트 모드에서의 배경색 변경 */
 .projectSkill.lightMode {
-  background-color: rgba(220, 220, 220, 0.7); /* 라이트 모드에서의 배경색 */
+  background-color: rgba(220, 220, 220, 0.7);
 }
 
 @media (max-width: 480px) {
