@@ -9,8 +9,9 @@ const HomeSection = ({ darkMode }: HomeSectionProps) => {
   return (
     <section
       id="home"
-      className="section h-screen flex items-center justify-center transition-colors duration-500"
-      style={{ backgroundColor: darkMode ? "#070D1B" : "#FFFFFF" }}
+      className={`section h-screen flex items-center justify-center transition-all duration-500 ease-in-out ${
+        darkMode ? "bg-[#070D1B]" : "bg-white"
+      }`}
     >
       <div
         id="HomeContainer"
@@ -20,13 +21,14 @@ const HomeSection = ({ darkMode }: HomeSectionProps) => {
           Seonggyo Jung
         </h1>
         <div
-          className={`text-sm md:text-lg text-center transition-colors duration-500 ${
+          className={`text-sm md:text-lg text-center transition-colors duration-500 ease-in-out ${
             darkMode ? "text-white" : "text-black"
           }`}
         >
           안녕하세요 블록체인 & 프론트엔드 개발자 정승교입니다.
         </div>
         <div id="SNS" className="flex justify-around mt-8 gap-10">
+          {/* 아이콘 전환 */}
           <a
             href="https://twitter.com/chamdom44"
             target="_blank"

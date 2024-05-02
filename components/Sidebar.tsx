@@ -33,7 +33,7 @@ const Sidebar: FC<SidebarProps> = ({ darkMode, toggleDarkMode }) => {
           <Image
             src="/profile.jpg"
             alt="Profile"
-            className={`rounded-full mx-auto shadow-lg border-2 ${
+            className={`transition-all duration-500 ease-in-out rounded-full mx-auto shadow-lg border-2 ${
               darkMode ? "border-white" : "border-black"
             }`}
             width={250}
@@ -44,7 +44,7 @@ const Sidebar: FC<SidebarProps> = ({ darkMode, toggleDarkMode }) => {
         <hr className="border-[2px] border-[#101624]" />
         <div
           id="section"
-          className="mt-5 space-y-4 text-lg font-bold uppercase transition-colors duration-500"
+          className="mt-5 space-y-4 text-lg font-bold uppercase transition-colors duration-500 "
         >
           <ScrollLink
             to="home"
@@ -53,7 +53,7 @@ const Sidebar: FC<SidebarProps> = ({ darkMode, toggleDarkMode }) => {
             offset={0}
             duration={500}
             activeClass="text-yellow-500 dark:text-yellow-500"
-            className={`block my-2 hover:opacity-70 cursor-pointer ${
+            className={`transition-all duration-500 ease-in-out block my-2 hover:opacity-70 cursor-pointer ${
               darkMode ? "" : "text-black"
             }`}
             onClick={closeMobileMenu}
@@ -67,7 +67,7 @@ const Sidebar: FC<SidebarProps> = ({ darkMode, toggleDarkMode }) => {
             offset={0}
             duration={500}
             activeClass="text-yellow-500 dark:text-yellow-500"
-            className={`block my-2 hover:opacity-70 cursor-pointer ${
+            className={`transition-all duration-500 ease-in-out block my-2 hover:opacity-70 cursor-pointer ${
               darkMode ? "" : "text-black"
             }`}
             onClick={closeMobileMenu}
@@ -81,7 +81,7 @@ const Sidebar: FC<SidebarProps> = ({ darkMode, toggleDarkMode }) => {
             offset={0}
             duration={500}
             activeClass="text-yellow-500 dark:text-yellow-500"
-            className={`block my-2 hover:opacity-70 cursor-pointer ${
+            className={`transition-all duration-500 ease-in-out block my-2 hover:opacity-70 cursor-pointer ${
               darkMode ? "" : "text-black"
             }`}
             onClick={closeMobileMenu}
@@ -95,7 +95,7 @@ const Sidebar: FC<SidebarProps> = ({ darkMode, toggleDarkMode }) => {
             offset={0}
             duration={500}
             activeClass="text-yellow-500 dark:text-yellow-500"
-            className={`block my-2 hover:opacity-70 cursor-pointer ${
+            className={`transition-all duration-500 ease-in-out block my-2 hover:opacity-70 cursor-pointer ${
               darkMode ? "" : "text-black"
             }`}
             onClick={closeMobileMenu}

@@ -23,11 +23,11 @@ const ProjectSection = ({ darkMode }: ProjectProps) => {
   return (
     <section
       id="project"
-      className={`${styles.section} ${styles.flex} ${styles.itemsCenter} ${styles.justifyCenter} ${styles.transitionColors} ${styles.duration500} overflow-y-auto`}
+      className={`${styles.section} ${styles.flex} ${styles.itemsCenter} ${styles.justifyCenter} ${styles.transitionColors} ${styles.duration500} overflow-y-auto transition-all duration-500 ease-in-out`}
       style={{ backgroundColor: darkMode ? "#0D1117" : "#F0F6FC" }}
     >
       <div className={styles.projectContainer}>
-        <h1 className="text-4xl text-yellow-500 mt-24 mb-24 text-center">
+        <h1 className="text-4xl text-yellow-500 mt-24 mb-24 text-center transition-all duration-500 ease-in-out">
           Projects
         </h1>
         <div className={styles.projectGrid}>
@@ -46,7 +46,9 @@ const ProjectSection = ({ darkMode }: ProjectProps) => {
                 }`}
               >
                 <div
-                  className={`${styles.front} ${styles.projectContent} ${
+                  className={`transition-all duration-500 ease-in-out ${
+                    styles.front
+                  } ${styles.projectContent} ${
                     !darkMode ? styles.lightMode : ""
                   }`}
                 >
@@ -77,7 +79,7 @@ const ProjectSection = ({ darkMode }: ProjectProps) => {
                   </div>
                 </div>
                 <div
-                  className={`${styles.back} ${styles.projectContent}`}
+                  className={`transition-all duration-500 ease-in-out ${styles.back} ${styles.projectContent}`}
                   style={{ backgroundColor: darkMode ? "#161B22" : "#FFFFFF" }}
                 >
                   <div className={styles.projectInfo}>

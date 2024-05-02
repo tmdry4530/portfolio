@@ -8,18 +8,18 @@ const AboutSection = ({ darkMode }: AboutSectionProps) => {
   return (
     <section
       id="about"
-      className="section min-h-screen flex flex-col items-center justify-center px-4 md:px-0 py-16 transition-colors duration-500 overflow-y-auto"
-      style={{ backgroundColor: darkMode ? "#0A101E" : "#F0F0F0" }}
+      className={`section min-h-screen flex flex-col items-center justify-center px-4 md:px-0 py-16 transition-all duration-500 ease-in-out ${
+        darkMode ? "bg-[#0A101E]" : "bg-[#F0F0F0]"
+      }`}
     >
       <h1 className="text-4xl text-yellow-500 mb-24 text-center">About me</h1>
       <div className="w-full md:w-4/5 mx-auto transition-opacity duration-500">
-        {" "}
         <div className="flex flex-col xl:flex-row items-center justify-center mb-12">
           <div className="flex justify-center mb-8 xl:mb-0 xl:w-1/3">
             <Image
               src="/profile.jpg"
               alt="Profile"
-              className={`rounded-lg shadow-2xl border-2 ${
+              className={`transition-all duration-500 ease-in-out rounded-lg shadow-2xl border-2 ${
                 darkMode ? "border-white" : "border-black"
               }`}
               width={200}
@@ -42,14 +42,13 @@ const AboutSection = ({ darkMode }: AboutSectionProps) => {
         </div>
         <div className="skill-container w-full">
           <h2
-            className={`text-center text-2xl mb-8 text-yellow-500 ${
+            className={`text-center text-2xl mb-8 text-yellow-500 transition-colors duration-500 ${
               darkMode ? "text-white" : "text-black"
             }`}
           >
             Skills
           </h2>
           <ul className="flex flex-wrap justify-center gap-4 col-md-12 text-center list-inline mx-auto skill-icon transition-opacity duration-500">
-            {" "}
             {[
               { name: "HTML 5", icon: "devicon-html5-plain colored" },
               { name: "CSS", icon: "devicon-css3-plain colored" },
@@ -69,7 +68,7 @@ const AboutSection = ({ darkMode }: AboutSectionProps) => {
                   : "devicon-solidity-plain colored",
               },
               {
-                name: "Hardhat,\nEthers.js",
+                name: "Hardhat, Ethers.js",
                 icon: "devicon-hardhat-plain colored",
               },
               {
