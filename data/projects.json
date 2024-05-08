@@ -4,7 +4,7 @@
     "summary": "Web3 기프티콘 마켓플레이스",
     "imageUrl": "Naegift.gif",
     "subtitle": "Naegift",
-    "description": "Naegift는 탈중앙화 기프티콘 마켓플레이스입니다. MetaMask를 사용하여 트랜잭션을 발생시키고, 이더리움 블록체인과 스마트 컨트랙트를 활용한 에스크로 서비스가 거래 중개 역할을 담당합니다. 가장 핵심 기술로, 분산된 신원 및 검증 가능한 자격증명 (DID / VC)을 사용하여 안전하게 신원을 관리하고 소유권을 보장합니다.",
+    "description": "Naegift는 탈중앙화 기프티콘 마켓플레이스입니다. MetaMask를 사용하여 트랜잭션을 발생시키고, 이더리움 블록체인과 스마트 컨트랙트를 활용한 에스크로 서비스가 거래 중개 역할을 담당합니다. 그리고 Push protocol을 이용하여 탈중앙 알림프로토콜을 사용하였고, DID / VC를 활용하여 사용자의 신원을 관리하였습니다.",
     "github": "https://github.com/naegift/did_project",
     "skill": [
       { "name": "React", "icon": "devicon-react-original colored" },
