@@ -1,5 +1,5 @@
-import { useEffect, useState, useRef } from "react";
-import { Element, scroller, Events, scrollSpy } from "react-scroll";
+import { useState, useRef } from "react";
+import { Element } from "react-scroll";
 import HomeSection from "@/components/Home";
 import AboutSection from "@/components/About";
 import ProjectSection from "@/components/Project";
@@ -14,43 +14,43 @@ const Section = ({ darkMode }: SectionProps) => {
   const isScrollingRef = useRef(false);
   const sectionNames = ["home", "about", "project", "experience"];
 
-  const handleScroll = (e: any) => {
-    if (isScrollingRef.current) return;
+  // const handleScroll = (e: any) => {
+  //   if (isScrollingRef.current) return;
 
-    e.preventDefault();
+  //   e.preventDefault();
 
-    if (e.deltaY > 0 && activeSection < sectionNames.length - 1) {
-      setActiveSection((prev) => prev + 1);
-    } else if (e.deltaY < 0 && activeSection > 0) {
-      setActiveSection((prev) => prev - 1);
-    }
+  //   if (e.deltaY > 0 && activeSection < sectionNames.length - 1) {
+  //     setActiveSection((prev) => prev + 1);
+  //   } else if (e.deltaY < 0 && activeSection > 0) {
+  //     setActiveSection((prev) => prev - 1);
+  //   }
 
-    isScrollingRef.current = true;
-    setTimeout(() => (isScrollingRef.current = false), 500);
-  };
+  //   isScrollingRef.current = true;
+  //   setTimeout(() => (isScrollingRef.current = false), 500);
+  // };
 
-  useEffect(() => {
-    window.addEventListener("wheel", handleScroll, { passive: false });
+  // useEffect(() => {
+  //   window.addEventListener("wheel", handleScroll, { passive: false });
 
-    Events.scrollEvent.register("begin", function (to, element) {
-      setActiveSection(sectionNames.indexOf(to));
-    });
+  //   Events.scrollEvent.register("begin", function (to, element) {
+  //     setActiveSection(sectionNames.indexOf(to));
+  //   });
 
-    scrollSpy.update();
+  //   scrollSpy.update();
 
-    return () => {
-      window.removeEventListener("wheel", handleScroll);
-      Events.scrollEvent.remove("begin");
-    };
-  }, [activeSection]);
+  //   return () => {
+  //     window.removeEventListener("wheel", handleScroll);
+  //     Events.scrollEvent.remove("begin");
+  //   };
+  // }, [activeSection]);
 
-  useEffect(() => {
-    scroller.scrollTo(sectionNames[activeSection], {
-      duration: 800,
-      delay: 0,
-      smooth: "easeInOutQuart",
-    });
-  }, [activeSection]);
+  // useEffect(() => {
+  //   scroller.scrollTo(sectionNames[activeSection], {
+  //     duration: 800,
+  //     delay: 0,
+  //     smooth: "easeInOutQuart",
+  //   });
+  // }, [activeSection]);
 
   return (
     <>
@@ -79,7 +79,6 @@ const Section = ({ darkMode }: SectionProps) => {
             <ExperienceSection darkMode={darkMode} />
           </Element>
         </div>
-        <footer></footer>
       </main>
     </>
   );
