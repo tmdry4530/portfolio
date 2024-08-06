@@ -9,7 +9,7 @@ const Page = () => {
 
   useEffect(() => {
     const localDarkMode = window.localStorage.getItem("darkMode");
-    setDarkMode(localDarkMode === "true");
+    setDarkMode(localDarkMode === "false");
   }, []);
 
   useEffect(() => {
