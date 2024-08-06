@@ -4,7 +4,7 @@ import Sidebar from "@/components/Sidebar";
 import Home from "@/components/Section";
 
 const Page = () => {
-  const [darkMode, setDarkMode] = useState(false);
+  const [darkMode, setDarkMode] = useState(true);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
