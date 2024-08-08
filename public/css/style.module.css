@@ -244,3 +244,25 @@
 .textCenter {
   text-align: center;
 }
+
+.loading-overlay {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  position: fixed;
+  width: 100%;
+  background: white;
+  transition: opacity 0.5s ease-out, visibility 0.5s ease-out;
+}
+
+.loading-active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.loading-inactive {
+  opacity: 0;
+  visibility: hidden;
+}

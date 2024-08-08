@@ -15,7 +15,7 @@ const AboutSection = ({ darkMode }: AboutSectionProps) => {
       <h1 className="text-4xl text-yellow-500 mb-24 text-center">About me</h1>
       <div className="w-full md:w-4/5 mx-auto transition-opacity duration-500">
         <div className="flex flex-col xl:flex-row items-center justify-center mb-12">
-          <div className="flex justify-center mb-8 xl:mb-0 xl:w-1/3">
+          {/* <div className="flex justify-center mb-8 xl:mb-0 xl:w-1/3">
             <Image
               src="/profile.jpg"
               alt="Profile"
@@ -26,18 +26,16 @@ const AboutSection = ({ darkMode }: AboutSectionProps) => {
               height={200}
               layout="intrinsic"
             />
-          </div>
+          </div> */}
           <div
-            className={`transition-colors duration-500 ml-0 xl:ml-12 p-6 text-center xl:text-left border rounded-xl h-full xl:w-2/3 text-base md:text-lg ${
+            className={`transition-colors duration-500 ml-0 p-6 text-center xl:text-left border rounded-xl h-full text-base md:text-lg ${
               darkMode ? "bg-gray-800 text-white" : "bg-white text-black"
             }`}
           >
-            저는 새로운 기술을 탐구하고 활용하는 것을 좋아하는 개발자입니다.
-            현재 블록체인 및 프론트엔드 분야에서는 지금도 끊임없이 새로운
-            기술들이 많이 나오고 있습니다. <br />
-            이러한 기술들을 배우고 활용하는 것은 저에게 큰 즐거움을 줍니다.
-            또한, 이러한 기술들을 활용하여 사람들에게 도움이 되는 서비스를
-            만들어내는 것이 저의 목표입니다.
+            최신 웹 개발 기술에 열정을 가지고, 자잘한 것이라도 직접 만들어보는
+            것을 즐기는 개발자입니다. <br />
+            목표를 위해 달려가는 열정과 탐구심을 바탕으로, 꾸준히 성장하며
+            사용자에게 뛰어난 경험을 제공하는 개발자로서 일하고 싶습니다.
           </div>
         </div>
         <div className="skill-container w-full">
