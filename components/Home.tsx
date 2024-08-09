@@ -18,17 +18,16 @@ const HomeSection = ({ darkMode }: HomeSectionProps) => {
         className="flex flex-col justify-center items-center px-4 md:px-0"
       >
         <h1 className="text-3xl md:text-6xl text-yellow-500 mb-6 md:mb-10 text-center">
-          Seonggyo Jung
+          Hello, I'm Seonggyo
         </h1>
         <div
           className={`text-sm md:text-lg text-center transition-colors duration-500 ease-in-out ${
             darkMode ? "text-white" : "text-black"
           }`}
         >
-          안녕하세요 블록체인 & 프론트엔드 개발자 정승교입니다.
+          안녕하세요 프론트엔드 개발자 정승교입니다.
         </div>
         <div id="SNS" className="flex justify-around mt-8 gap-10">
-          {/* 아이콘 전환 */}
           <a
             href="https://twitter.com/chamdom44"
             target="_blank"

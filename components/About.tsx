@@ -69,11 +69,6 @@ const AboutSection = ({ darkMode }: AboutSectionProps) => {
                 name: "Hardhat, Ethers.js",
                 icon: "devicon-hardhat-plain colored",
               },
-              {
-                name: "R",
-                icon: "devicon-r-plain colored",
-              },
-              { name: "python", icon: "devicon-python-plain colored" },
             ].map(({ name, icon }) => (
               <li key={name} className="list-inline-item mx-3">
                 <div
