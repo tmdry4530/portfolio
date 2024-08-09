@@ -18,7 +18,7 @@ const HomeSection = ({ darkMode }: HomeSectionProps) => {
         className="flex flex-col justify-center items-center px-4 md:px-0"
       >
         <h1 className="text-3xl md:text-6xl text-yellow-500 mb-6 md:mb-10 text-center">
-          Hello, I'm Seonggyo
+          Hello, I&apos;m Seonggyo
         </h1>
         <div
           className={`text-sm md:text-lg text-center transition-colors duration-500 ease-in-out ${
