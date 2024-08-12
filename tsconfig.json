@@ -34,7 +34,18 @@
     ".next/types/**/*.ts",
     "tailwind.config.js",
     "tailwind.config.js",
-    "tailwind.config.js"
+    "tailwind.config.js",
+    "app/layout.jsx",
+    "app/page.jsx",
+    "hooks/useLoadingScreen.jsx",
+    "hooks/useDarkMode.jsx",
+    "components/About.jsx",
+    "components/Experience.jsx",
+    "components/Footer.jsx",
+    "components/Home.jsx",
+    "components/Project.jsx",
+    "components/Section.jsx",
+    "components/Sidebar.jsx"
   ],
   "exclude": [
     "node_modules"
