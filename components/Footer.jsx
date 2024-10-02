@@ -1,10 +1,6 @@
 import React from "react";
 
-interface FooterProps {
-  darkMode: boolean;
-}
-
-const Footer = ({ darkMode }: FooterProps) => {
+const Footer = ({ darkMode }) => {
   return (
     <>
       <footer
