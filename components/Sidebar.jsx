@@ -11,6 +11,8 @@ const Sidebar = ({
   toggleSidebar,
 }) => {
   const [isMobile, setIsMobile] = useState(false);
+  const bgColor = darkMode ? "bg-[#070D1B]" : "bg-white";
+  const textColor = darkMode ? "text-white" : "text-black";
 
   useEffect(() => {
     const handleResize = () => {
@@ -28,12 +30,13 @@ const Sidebar = ({
   return (
     <>
       <aside
-        className={`${styles.sidebar} ${
-          sidebarVisible || !isMobile
-            ? styles.sidebarVisible
-            : styles.sidebarHidden
-        } ${darkMode ? styles.dark : styles.light} transition-all ease-in-out 
-        ${darkMode ? "border-r border-gray-700" : "border-r border-gray-300"}`}
+        className={`
+          fixed top-0 left-0 h-full w-72
+          ${bgColor} ${textColor}
+          transition-all duration-500 ease-in-out
+          ${sidebarVisible ? "translate-x-0" : "-translate-x-full"}
+          border-r ${darkMode ? "border-gray-700" : "border-gray-200"}
+        `}
       >
         <div id="profile" className="mb-5 p-5">
           <Image
@@ -59,7 +62,7 @@ const Sidebar = ({
             offset={0}
             duration={500}
             activeClass="text-yellow-500"
-            className="hover:opacity-70 cursor-pointer transition-colors ease-in-out"
+            className="hover:opacity-70 cursor-pointer transition-colors duration-500 ease-in-out"
             onClick={toggleSidebar}
           >
             Home
@@ -71,7 +74,7 @@ const Sidebar = ({
             offset={0}
             duration={500}
             activeClass="text-yellow-500"
-            className="hover:opacity-70 cursor-pointer transition-colors ease-in-out"
+            className="hover:opacity-70 cursor-pointer transition-colors duration-500  ease-in-out"
             onClick={toggleSidebar}
           >
             About
@@ -83,7 +86,7 @@ const Sidebar = ({
             offset={0}
             duration={500}
             activeClass="text-yellow-500"
-            className="hover:opacity-70 cursor-pointer transition-colors ease-in-out"
+            className="hover:opacity-70 cursor-pointer transition-colors duration-500  ease-in-out"
             onClick={toggleSidebar}
           >
             Project
@@ -95,7 +98,7 @@ const Sidebar = ({
             offset={0}
             duration={500}
             activeClass="text-yellow-500"
-            className="hover:opacity-70 cursor-pointer transition-colors ease-in-out"
+            className="hover:opacity-70 cursor-pointer transition-colors duration-500  ease-in-out"
             onClick={toggleSidebar}
           >
             Experience

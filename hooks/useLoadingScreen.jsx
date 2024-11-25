@@ -6,17 +6,17 @@ const useLoadingScreen = () => {
   const [startSlideOut, setStartSlideOut] = useState(false);
 
   useEffect(() => {
-    const textAnimationTimer = setTimeout(() => {
-      setStartSlideOut(true); // 2초 후 슬라이드 아웃 시작
+    const slideOutTimer = setTimeout(() => {
+      setStartSlideOut(true);
     }, 2000);
 
-    const backgroundAnimationTimer = setTimeout(() => {
-      setLoadingComplete(true); // 슬라이드 아웃 1초 후 로딩 완료
+    const completeTimer = setTimeout(() => {
+      setLoadingComplete(true);
     }, 3000);
 
     return () => {
-      clearTimeout(textAnimationTimer);
-      clearTimeout(backgroundAnimationTimer);
+      clearTimeout(slideOutTimer);
+      clearTimeout(completeTimer);
     };
   }, []);
 

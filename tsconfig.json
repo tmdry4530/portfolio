@@ -39,7 +39,7 @@
     "app/page.jsx",
     "hooks/useLoadingScreen.jsx",
     "hooks/useDarkMode.jsx",
-    "components/About.jsx",
+    "components/Skills.jsx",
     "components/Experience.jsx",
     "components/Footer.jsx",
     "components/Home.jsx",

@@ -1,6 +1,5 @@
 import Image from "next/image";
 import { useEffect, useState } from "react";
-import styles from "@/public/css/style.module.css";
 
 const HomeSection = ({ darkMode }) => {
   const [mainTextVisible, setMainTextVisible] = useState(false);
@@ -15,7 +14,7 @@ const HomeSection = ({ darkMode }) => {
 
     const subTextTimer = setTimeout(() => {
       setSubTextVisible(true);
-    }, 3500);
+    }, 2500);
 
     return () => {
       clearTimeout(mainTextTimer);
@@ -39,7 +38,7 @@ const HomeSection = ({ darkMode }) => {
       alt: "Github",
     },
     {
-      href: "https://www.linkedin.com/in/seonggyo-jung-30a44b250/",
+      href: "https://www.linkedin.com/in/seonggyo-jung-30a44b250",
       src: `/linkedin-${iconColor}.png`,
       alt: "Linkedin",
     },
@@ -48,40 +47,56 @@ const HomeSection = ({ darkMode }) => {
   return (
     <section
       id="home"
-      className={`section h-screen flex items-center justify-center transition-all duration-500 ease-in-out ${bgColor}`}
+      className={`min-h-screen flex items-center justify-center transition-all duration-500 ease-in-out ${bgColor} py-20`}
     >
-      <div className="relative flex flex-col items-center justify-center h-full w-full transition-all duration-500">
+      <div className="relative flex flex-col items-center justify-center w-full max-w-6xl mx-auto px-4 md:px-8">
         <div
-          className={`${styles.mainText} ${
-            mainTextVisible ? styles.showText : styles.hiddenText
-          } transition-all duration-500`}
-          style={{ zIndex: zIndex }}
+          className={`relative text-center mb-8`}
+          style={{
+            zIndex: zIndex,
+            opacity: mainTextVisible ? 1 : 0,
+            transform: mainTextVisible ? "translateY(0)" : "translateY(20px)",
+            transition: "opacity 1s ease-in-out, transform 1s ease-in-out",
+          }}
         >
-          <h1 className="text-3xl md:text-6xl text-yellow-500 text-center">
-            Hello, I&apos;m Seonggyo
+          <h1 className="text-4xl md:text-7xl font-bold text-yellow-500 mb-4">
+            Hello, I&apos;m Seunggyo
           </h1>
+          <h2 className="text-2xl md:text-4xl text-gray-600 dark:text-gray-300">
+            Frontend Developer
+          </h2>
         </div>
 
         <div
-          className={`${styles.subText} ${
-            subTextVisible ? styles.showText : styles.hiddenText
-          } flex flex-col justify-center items-center px-4 md:px-0 transition-all duration-500`}
+          className={`max-w-2xl text-center transition-all duration-1500 ease-in-out`}
+          style={{
+            opacity: subTextVisible ? 1 : 0,
+            transform: subTextVisible ? "translateY(0)" : "translateY(20px)",
+            transition: "opacity 2s ease-in-out, transform 2s ease-in-out",
+          }}
         >
-          <div
-            className={`text-sm md:text-lg text-center transition-opacity duration-500 ease-in-out ${textColor} mb-6`}
-          >
-            안녕하세요 프론트엔드 개발자 정승교입니다.
-          </div>
-          <div id="SNS" className="flex justify-center mt-4 gap-6">
+          <p className={`text-lg md:text-xl ${textColor} mb-8 leading-relaxed`}>
+            안녕하세요. 사용자 경험을 중시하는 프론트엔드 개발자 정승교입니다.
+            최신 웹 기술과 클린 코드를 추구하며, 지속적인 학습과 성장을 통해 더
+            나은 웹 서비스를 만들어가고 있습니다.
+          </p>
+
+          <div className="flex justify-center gap-8">
             {snsLinks.map(({ href, src, alt }) => (
               <a
                 key={alt}
                 href={href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className={`${styles.snsIcon} transition-all duration-500`}
+                className="transform hover:scale-125 transition-all duration-300"
               >
-                <Image src={src} alt={alt} width={44} height={44} />
+                <Image
+                  src={src}
+                  alt={alt}
+                  width={48}
+                  height={48}
+                  className="filter hover:brightness-125"
+                />
               </a>
             ))}
           </div>

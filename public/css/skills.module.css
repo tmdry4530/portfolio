@@ -1,0 +1,7 @@
+.skillIcon {
+  transition: transform 0.3s ease;
+}
+
+.skillIcon:hover {
+  transform: rotate(10deg) scale(1.1);
+}
