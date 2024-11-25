@@ -4,7 +4,6 @@ import {
   VerticalTimelineElement,
 } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
-import styles from "@/public/css/style.module.css"; // 모듈 CSS 사용
 
 const Experience = ({ darkMode }) => {
   const [visibleSections, setVisibleSections] = useState([]);
@@ -69,7 +68,7 @@ const Experience = ({ darkMode }) => {
           }
         });
       },
-      { threshold: 0.1 } // 더 작은 값으로 설정하여 애니메이션이 일찍 트리거되도록 함
+      { threshold: 0.1 }
     );
 
     document.querySelectorAll(".vertical-timeline-element").forEach((el) => {
@@ -79,18 +78,13 @@ const Experience = ({ darkMode }) => {
     return () => observer.disconnect();
   }, [visibleSections]);
 
-  const contentStyle = {
-    background: darkMode ? "#1D2939" : "#F3F4F6",
-    color: darkMode ? "white" : "black",
-  };
-
   return (
     <section
-      id="experience"
-      className="section min-h-screen flex flex-col items-center justify-center py-12 md:py-24 transition-all duration-500 ease-in-out"
-      style={{ backgroundColor: darkMode ? "#070D1B" : "#FFFFFF" }}
+      className={`flex flex-col items-center justify-center py-12 md:py-24 transition-all duration-500 ease-in-out ${
+        darkMode ? "bg-gray-900" : "bg-white"
+      }`}
     >
-      <h1 className="section-title text-4xl text-yellow-500 mb-12 md:mb-24">
+      <h1 className="text-center text-4xl md:text-5xl text-yellow-500 mb-24">
         Experience
       </h1>
       <VerticalTimeline
@@ -99,48 +93,70 @@ const Experience = ({ darkMode }) => {
         className="w-full md:w-4/5"
       >
         {experiences.map((exp, index) => (
-          <VerticalTimelineElement
+          <ExperienceElement
             key={index}
-            id={`experience-${index}`}
-            contentStyle={contentStyle}
-            contentArrowStyle={{
-              borderRight: `7px solid ${darkMode ? "#1D2939" : "#F3F4F6"}`,
-            }}
-            date={exp.date}
-            iconStyle={{
-              background: darkMode ? "#4A5568" : "#2196F3",
-              color: "white",
-            }}
-            className={`vertical-timeline-element transition-all duration-500 ease-in-out ${
-              visibleSections.includes(`experience-${index}`)
-                ? styles.fadeInUp
-                : ""
-            }`}
-          >
-            <h3 className="vertical-timeline-element-title text-xl text-yellow-500 pb-2">
-              {exp.title}
-            </h3>
-            <h4 className="vertical-timeline-element-subtitle pb-2">
-              {exp.subtitle}
-            </h4>
-            <div className="flex flex-wrap gap-2">
-              {exp.techs.map((tech, idx) => (
-                <span
-                  key={idx}
-                  className={`px-2 py-1 rounded-full transition-all duration-500 ease-in-out ${
-                    darkMode
-                      ? "bg-gray-700 text-white"
-                      : "bg-gray-200 text-gray-800"
-                  }`}
-                >
-                  {tech}
-                </span>
-              ))}
-            </div>
-          </VerticalTimelineElement>
+            index={index}
+            experience={exp}
+            darkMode={darkMode}
+            visibleSections={visibleSections}
+          />
         ))}
       </VerticalTimeline>
     </section>
   );
 };
+
+const ExperienceElement = ({
+  index,
+  experience,
+  darkMode,
+  visibleSections,
+}) => {
+  const { date, title, subtitle, techs } = experience;
+  const contentStyle = {
+    background: darkMode ? "#1D2939" : "#F3F4F6",
+    color: darkMode ? "#FFFFFF" : "#000000",
+  };
+
+  return (
+    <VerticalTimelineElement
+      id={`experience-${index}`}
+      contentStyle={contentStyle}
+      contentArrowStyle={{
+        borderRight: `7px solid ${darkMode ? "#1D2939" : "#F3F4F6"}`,
+      }}
+      date={date}
+      iconStyle={{
+        background: darkMode ? "#4A5568" : "#2196F3",
+        color: "white",
+      }}
+      className={`vertical-timeline-element transition-all duration-500 ease-in-out ${
+        visibleSections.includes(`experience-${index}`)
+          ? "opacity-100 translate-y-0"
+          : "opacity-0 translate-y-5"
+      }`}
+    >
+      <h3 className="text-xl text-yellow-500 pb-2">{title}</h3>
+      <h4 className="pb-2">{subtitle}</h4>
+      <div className="flex flex-wrap gap-2">
+        {techs.map((tech, idx) => (
+          <TechBadge key={idx} tech={tech} darkMode={darkMode} />
+        ))}
+      </div>
+    </VerticalTimelineElement>
+  );
+};
+
+const TechBadge = ({ tech, darkMode }) => {
+  return (
+    <span
+      className={`px-2 py-1 rounded-full transition-all duration-500 ease-in-out ${
+        darkMode ? "bg-gray-700 text-white" : "bg-gray-200 text-gray-800"
+      }`}
+    >
+      {tech}
+    </span>
+  );
+};
+
 export default Experience;

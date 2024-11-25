@@ -14,43 +14,33 @@ const ProjectSection = ({ darkMode }) => {
     );
   };
 
-  const bgColor = darkMode ? "#0D1117" : "#F0F6FC";
-  const projectTitleColor = darkMode ? "#C9D1D9" : "#1F2937";
-  const projectSummaryColor = darkMode ? "#8B949E" : "#4B5563";
-  const projectBackColor = darkMode ? "#161B22" : "#FFFFFF";
-  const projectLinkColor = darkMode ? "#58A6FF" : "#2D63EB";
-
   return (
     <section
       id="project"
       className={`${styles.section} ${styles.flex} ${styles.itemsCenter} ${styles.justifyCenter} ${styles.transitionColors} overflow-y-auto transition-all duration-500 ease-in-out`}
-      style={{ backgroundColor: bgColor }}
+      style={{ backgroundColor: darkMode ? "#0D1117" : "#F0F6FC" }}
     >
       <div className={styles.projectContainer}>
         <h1 className="text-4xl text-yellow-500 mt-24 mb-24 text-center">
           Projects
         </h1>
-        <div className={styles.projectGrid}>
-          {projects.map((project, index) => (
+        <div
+          className={`${styles.projectGrid} grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8`}
+        >
+          {projects.map((project) => (
             <div
               key={project.title}
               className={`${styles.projectCard} ${
                 !darkMode && styles.lightMode
-              } ${
-                index >= 4 && styles.hidden
-              } transition-all duration-500 ease-in-out`}
+              }`}
               onClick={() => handleCardClick(project.title)}
             >
               <div
                 className={`${styles.project} ${
                   flippedCards.includes(project.title) && styles.flipped
-                } transition-all duration-500 ease-in-out`}
+                }`}
               >
-                <div
-                  className={`${styles.front} ${styles.projectContent} ${
-                    !darkMode && styles.lightMode
-                  } transition-all duration-500 ease-in-out`}
-                >
+                <div className={`${styles.front} ${styles.projectContent}`}>
                   <header className={styles.projectHeader}>
                     <Image
                       src={`/${project.imageUrl}`}
@@ -63,62 +53,26 @@ const ProjectSection = ({ darkMode }) => {
                     />
                   </header>
                   <div className={styles.projectInfo}>
-                    <h2
-                      className={styles.projectTitle}
-                      style={{ color: projectTitleColor }}
-                    >
-                      {project.title}
-                    </h2>
-                    <p
-                      className={styles.projectSummary}
-                      style={{ color: projectSummaryColor }}
-                    >
-                      {project.summary}
-                    </p>
+                    <h2 className={styles.projectTitle}>{project.title}</h2>
+                    <p className={styles.projectSummary}>{project.summary}</p>
                   </div>
                 </div>
-                <div
-                  className={`${styles.back} ${styles.projectContent} transition-all duration-500 ease-in-out`}
-                  style={{ backgroundColor: projectBackColor }}
-                >
+                <div className={`${styles.back} ${styles.projectContent}`}>
                   <div className={styles.projectInfo}>
-                    <div className={styles.projectSubtitleContainer}>
-                      <h2
-                        className={styles.projectSubtitle}
-                        style={{ color: projectTitleColor }}
-                      >
-                        {project.subtitle}
-                      </h2>
-                      <a
-                        href={project.github}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className={styles.projectLink}
-                        style={{ color: projectLinkColor }}
-                      >
-                        GitHub
-                      </a>
-                    </div>
-                    <p
-                      className={styles.projectDescription}
-                      style={{ color: projectSummaryColor }}
+                    <h2 className={styles.projectSubtitle}>
+                      {project.subtitle}
+                    </h2>
+                    <a
+                      href={project.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
                     >
-                      {project.description}
-                    </p>
+                      GitHub
+                    </a>
                   </div>
-                  <footer className={styles.projectSkills}>
-                    {project.skill.map((skill, index) => (
-                      <span
-                        key={index}
-                        className={`${styles.projectSkill} ${
-                          !darkMode && styles.lightMode
-                        } transition-all duration-500 ease-in-out`}
-                        style={{ color: projectSummaryColor }}
-                      >
-                        {skill.name}
-                      </span>
-                    ))}
-                  </footer>
+                  <p className={styles.projectDescription}>
+                    {project.description}
+                  </p>
                 </div>
               </div>
             </div>

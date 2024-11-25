@@ -1,5 +1,4 @@
 import React, { useEffect } from "react";
-import styles from "@/public/css/style.module.css";
 
 const LoadingScreen = ({ slideOut, onLoadingComplete }) => {
   useEffect(() => {
@@ -15,7 +14,9 @@ const LoadingScreen = ({ slideOut, onLoadingComplete }) => {
 
   return (
     <div
-      className={`${styles.loadingScreen} ${slideOut ? styles.slideOut : ""}`}
+      className={`fixed top-0 left-0 w-full h-full bg-[#d85c47] z-[9999] transition-transform duration-1000 ease-in-out ${
+        slideOut ? "transform translate-x-full" : ""
+      }`}
     ></div>
   );
 };

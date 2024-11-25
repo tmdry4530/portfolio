@@ -1,0 +1,8 @@
+.theme-transition {
+  transition: all 500ms ease-in-out;
+}
+
+.color-transition {
+  transition: background-color 500ms ease-in-out, color 500ms ease-in-out,
+    border-color 500ms ease-in-out;
+}

@@ -1,0 +1,14 @@
+.loadingScreen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #d85c47;
+  z-index: 9999;
+  transition: transform 1s ease-in-out;
+}
+
+.loadingScreen.slideOut {
+  transform: translateX(100%);
+}
