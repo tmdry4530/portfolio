@@ -12,8 +12,8 @@
 }
 
 .with-sidebar.section-container {
-  margin-left: 300px; /* 사이드바 너비를 300px로 설정 */
-  width: calc(100% - 300px); /* 나머지 공간을 섹션이 차지함 */
+  margin-left: 18rem; /* sidebar width matches tailwind w-72 */
+  width: calc(100% - 18rem); /* remaining space for content */
 }
 
 .pageContent {
