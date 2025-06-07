@@ -7,6 +7,10 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata = {
   title: "Seonggyo Jung",
   description: "Seonggyo Jung's portfolio site",
+  viewport: {
+    width: "device-width",
+    initialScale: 1,
+  },
   openGraph: {
     title: "Seonggyo Jung",
     description: "Seonggyo Jung's portfolio site",

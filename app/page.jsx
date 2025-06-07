@@ -13,7 +13,8 @@ const Page = () => {
 
   useEffect(() => {
     if (startSlideOut) {
-      setShowSidebar(true);
+      // Show sidebar by default only on desktop screens
+      setShowSidebar(window.innerWidth > 768);
     }
   }, [startSlideOut]);
 
